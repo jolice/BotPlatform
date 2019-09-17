@@ -15,7 +15,7 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
-class TelegramVideoAttachmentTest {
+public class TelegramVideoAttachmentTest {
 
     @Test
     void whenApplyVideoAttachmentThenAdded() {

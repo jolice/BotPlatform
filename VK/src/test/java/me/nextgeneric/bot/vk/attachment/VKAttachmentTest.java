@@ -9,7 +9,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
-class VKAttachmentTest {
+public class VKAttachmentTest {
 
     @Test
     void caption() {

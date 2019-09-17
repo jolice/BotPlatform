@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.mockito.Mockito.*;
 
-class VKOutgoingMessageTest {
+public class VKOutgoingMessageTest {
 
     @Test
     void text() {

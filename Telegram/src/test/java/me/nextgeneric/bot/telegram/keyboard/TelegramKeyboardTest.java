@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 
-class TelegramKeyboardTest {
+public class TelegramKeyboardTest {
 
     @Test
     void getKeyboard() {

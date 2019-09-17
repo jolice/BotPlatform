@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 
-class TelegramMessageFactoryTest {
+public class TelegramMessageFactoryTest {
 
     private TelegramMessageFactory telegramMessageFactory = new TelegramMessageFactory(mock(TelegramBot.class));
 

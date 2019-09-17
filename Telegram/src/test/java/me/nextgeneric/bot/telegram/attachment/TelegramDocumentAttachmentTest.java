@@ -13,7 +13,7 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-class TelegramDocumentAttachmentTest {
+public class TelegramDocumentAttachmentTest {
 
     @Test
     void apply() {

@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-class TelegramDocumentTest {
+public class TelegramDocumentTest {
 
     private static final Integer FILE_SIZE = Integer.MAX_VALUE;
     private static final String FILE_NAME = "FILE_NAME";

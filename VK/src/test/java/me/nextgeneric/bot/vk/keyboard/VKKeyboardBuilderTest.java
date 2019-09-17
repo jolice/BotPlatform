@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class VKKeyboardBuilderTest {
+public  class VKKeyboardBuilderTest {
 
     @Test
     void oneTime() {

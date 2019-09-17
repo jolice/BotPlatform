@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-class OutgoingTelegramMessageTest {
+public class OutgoingTelegramMessageTest {
 
     private static final String KEYBOARD_KEY = "reply_markup";
 

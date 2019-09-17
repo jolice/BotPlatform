@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-class IncomingTelegramMessageTest {
+public class IncomingTelegramMessageTest {
 
     private static final int VALUE = 1;
 

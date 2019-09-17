@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class VKKeyboardContextTest {
+public class VKKeyboardContextTest {
 
     private final VKKeyboardContext telegramKeyboardContext = new VKKeyboardContext();
 

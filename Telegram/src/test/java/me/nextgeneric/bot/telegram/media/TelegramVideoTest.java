@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-class TelegramVideoTest {
+public class TelegramVideoTest {
     private static final int WIDTH = 1;
 
     private static final int HEIGHT = 1;

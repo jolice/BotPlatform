@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 
-class AttachmentConfigurerTest {
+public class AttachmentConfigurerTest {
 
     private AttachmentConfigurer attachmentConfigurer = new AttachmentConfigurer(1L);
 
