@@ -1,6 +1,8 @@
 # BotPlatform
 
 [![Build Status](https://travis-ci.org/riguron/BotPlatform.svg?branch=master)](https://travis-ci.org/riguron/BotPlatform)
+[![codecov](https://codecov.io/gh/riguron/BotPlatform/branch/master/graph/badge.svg)](https://codecov.io/gh/riguron/BotPlatform)
+[![HitCount](http://hits.dwyl.io/riguron/BotPlatform.svg)](http://hits.dwyl.io/riguron/BotPlatform)
 
 Simple facade or abstraction for various chat bot platforms that allows for creating 
 platform-independent chat bots and choosing an appropriate platform at the runtime.
