@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public  class VKKeyboardBuilderTest {
+class VKKeyboardBuilderTest {
 
     @Test
     void oneTime() {
@@ -49,23 +49,4 @@ public  class VKKeyboardBuilderTest {
 
     }
 
-    @Test
-    void addButton() {
-    }
-
-    @Test
-    void newLine() {
-    }
-
-    @Test
-    void build() {
-    }
-
-    @Test
-    void resize() {
-    }
-
-    @Test
-    void selective() {
-    }
 }

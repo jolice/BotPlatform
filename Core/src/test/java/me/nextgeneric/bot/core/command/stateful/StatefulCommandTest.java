@@ -14,17 +14,16 @@ import static org.mockito.Mockito.when;
 
 public class StatefulCommandTest {
 
+    private State state = new State();
+
     static class State {
 
         int execution;
         int prompt;
     }
 
-    private State state = new State();
-
-
     @Test
-    public void whenPassedStateProperlyThenProceeded() {
+    void whenPassedStateProperlyThenProceeded() {
 
         CommandState third = state(x -> true, 3, CommandState.END);
 

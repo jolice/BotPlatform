@@ -3,6 +3,7 @@ package me.nextgeneric.bot.telegram.media;
 import com.pengrad.telegrambot.model.PhotoSize;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -16,7 +17,7 @@ public class TelegramPhotoTest {
 
     private TelegramPhoto telegramPhoto;
 
-    public TelegramPhotoTest() {
+    TelegramPhotoTest() {
         PhotoSize photo = mock(PhotoSize.class);
         when(photo.width()).thenReturn(WIDTH);
         when(photo.height()).thenReturn(HEIGHT);
@@ -26,16 +27,16 @@ public class TelegramPhotoTest {
 
     @Test
     void getWidth() {
-        when(telegramPhoto.getWidth()).thenReturn(WIDTH);
+       assertEquals(WIDTH, telegramPhoto.getWidth());
     }
 
     @Test
     void getHeight() {
-        when(telegramPhoto.getHeight()).thenReturn(HEIGHT);
+        assertEquals(HEIGHT, telegramPhoto.getHeight());
     }
 
     @Test
     void getPath() {
-        when(telegramPhoto.getPath()).thenReturn(PATH);
+        assertEquals(PATH, telegramPhoto.getPath());
     }
 }

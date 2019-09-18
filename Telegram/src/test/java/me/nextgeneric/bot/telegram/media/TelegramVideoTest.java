@@ -3,6 +3,7 @@ package me.nextgeneric.bot.telegram.media;
 import com.pengrad.telegrambot.model.Video;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -29,21 +30,21 @@ public class TelegramVideoTest {
 
     @Test
     void getWidth() {
-        when(telegramVideo.getWidth()).thenReturn(WIDTH);
+       assertEquals(WIDTH, telegramVideo.getWidth());
     }
 
     @Test
     void getHeight() {
-        when(telegramVideo.getHeight()).thenReturn(HEIGHT);
+        assertEquals(HEIGHT, telegramVideo.getHeight());
     }
 
     @Test
     void getDuration() {
-        when(telegramVideo.getDuration()).thenReturn(DURATION);
+        assertEquals(DURATION, telegramVideo.getDuration());
     }
 
     @Test
     void getPath() {
-        when(telegramVideo.getPath()).thenReturn(PATH);
+        assertEquals(PATH, telegramVideo.getPath());
     }
 }
