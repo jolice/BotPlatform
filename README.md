@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/riguron/BotPlatform.svg?branch=master)](https://travis-ci.org/riguron/BotPlatform)
 [![codecov](https://codecov.io/gh/riguron/BotPlatform/branch/master/graph/badge.svg)](https://codecov.io/gh/riguron/BotPlatform)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6676a6ea31d448e2a53e45b7652fd730)](https://www.codacy.com/manual/riguron/BotPlatform?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=riguron/BotPlatform&amp;utm_campaign=Badge_Grade)
 [![HitCount](http://hits.dwyl.io/riguron/BotPlatform.svg)](http://hits.dwyl.io/riguron/BotPlatform)
 
 Simple facade or abstraction for various chat bot platforms that allows for creating 
