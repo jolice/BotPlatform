@@ -2,16 +2,18 @@ package me.nextgeneric.bot.telegram.attachment.support;
 
 import com.pengrad.telegrambot.model.request.InputMedia;
 import com.pengrad.telegrambot.model.request.InputMediaPhoto;
+import com.pengrad.telegrambot.model.request.Keyboard;
 import com.pengrad.telegrambot.request.AbstractSendRequest;
 import com.pengrad.telegrambot.request.SendMediaGroup;
 import com.pengrad.telegrambot.request.SendPhoto;
 import me.nextgeneric.bot.core.keyboard.BotKeyboard;
+import me.nextgeneric.bot.telegram.keyboard.TelegramKeyboard;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 
-public class AttachmentConfigurerTest {
+class AttachmentConfigurerTest {
 
     private AttachmentConfigurer attachmentConfigurer = new AttachmentConfigurer(1L);
 
@@ -52,9 +54,9 @@ public class AttachmentConfigurerTest {
     void whenSetKeyboardThenApplied() {
         AbstractSendRequest<?> sendRequest = new SendPhoto(1L, new byte[0]);
         attachmentConfigurer.set(sendRequest);
-        BotKeyboard botKeyboard = mock(BotKeyboard.class);
+        BotKeyboard botKeyboard = new TelegramKeyboard(mock(Keyboard.class));
         assertEquals(attachmentConfigurer.getFinalQuery(botKeyboard), sendRequest);
-        assertTrue(sendRequest.getParameters().containsKey("keyboard"));
+        assertTrue(sendRequest.getParameters().containsKey("reply_markup"));
     }
 
     @Test
