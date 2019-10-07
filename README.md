@@ -77,7 +77,9 @@ public class EchoCommand implements Command {
     @Override
     public void execute(CommandExecution commandExecution) {
         MessageEvent event = commandExecution.getMessageEvent();
-        event.newMessage(commandExecution.getChatId()).text("Argument - " + commandExecution.getArguments().first()).send();
+        event.newMessage(commandExecution.getChatId())
+             .text("Argument - " + commandExecution.getArguments().first())
+             .send();
     }
 
     @Override
@@ -102,7 +104,9 @@ public class EchoMessageHandler implements ApplicationMessageHandler {
 
     @Override
     public void handleMessage(MessageEvent event) {
-        event.getMessageContext().newMessage(event.getChatId()).text("Echo - " + event.getText()).send();
+        event.getMessageContext()
+             .newMessage(event.getChatId()) 
+             .text("Echo - " + event.getText()).send();
     }
 }
 ```
