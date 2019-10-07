@@ -29,12 +29,15 @@ public class DispatcherHandler implements MessageHandler {
 
     @Override
     public void messageReceived(IncomingMessage incomingMessage) {
-        MessageEvent messageEvent = new MessageEvent(incomingMessage, messageContext, bot);
-        String body = incomingMessage.getText();
-        if (body.startsWith("/")) {
-            commandHandler.handle(messageEvent);
-        } else {
-            delegate.handleMessage(messageEvent);
+        if (incomingMessage != null) {
+            MessageEvent messageEvent = new MessageEvent(incomingMessage, messageContext, bot);
+            String body = incomingMessage.getText();
+            if (body.startsWith("/")) {
+                commandHandler.handle(messageEvent);
+            } else {
+                delegate.handleMessage(messageEvent);
+            }
         }
+
     }
 }
