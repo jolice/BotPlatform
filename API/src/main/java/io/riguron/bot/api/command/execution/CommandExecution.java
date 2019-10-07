@@ -7,7 +7,7 @@ public interface CommandExecution {
 
     Arguments getArguments();
 
-    MessageEvent getMessage();
+    MessageEvent getMessageEvent();
 
     String getBody();
 

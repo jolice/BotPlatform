@@ -12,6 +12,7 @@
     <artifactId>Bootstrap</artifactId>
 
     <build>
+        <finalName>BotPlatform</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

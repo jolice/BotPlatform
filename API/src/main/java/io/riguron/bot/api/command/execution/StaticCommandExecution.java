@@ -6,8 +6,6 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Setter;
-import io.riguron.bot.api.MessageEvent;
-import io.riguron.bot.api.command.arguments.Arguments;
 
 @Data
 @AllArgsConstructor
@@ -15,11 +13,11 @@ import io.riguron.bot.api.command.arguments.Arguments;
 public class StaticCommandExecution implements CommandExecution {
 
     private String body;
-    private MessageEvent message;
+    private MessageEvent messageEvent;
     private Arguments arguments;
 
     @Override
     public long getChatId() {
-        return message.getIncomingMessage().getChatId();
+        return messageEvent.getIncomingMessage().getChatId();
     }
 }
