@@ -129,7 +129,7 @@ java -cp BotPlatform.jar -Dloader.path=. -Dplugin.package=your.plugin.base.packa
 
 Arguments:
 
-- ```PlatformName``` is an identifier of messaging platform. Specify either of currenty supported ones (see above). Name is case sensitive.
+- ```PlatformName``` is an identifier of messaging platform. Specify either of currenty supported ones (see [currently supported platforms](#currently-supported-platforms)). Name is case sensitive.
 - ```-Dloader.path=.``` informs Spring Boot to load your bot's JAR from the current directory. Any other directory may be specified, for example, ```-Dloader.path=plugins/```. In this case, your bot's JAR must be put under ```plugins``` directory.
 - ```-Dplugin.package=your.plugin.base.package``` defines a package inside your jar that contains your bot's components. It's highly recommended to specify the package that contains all bot's classes and subpackages. Components outside the specified package will be ignored by the platform.
 
