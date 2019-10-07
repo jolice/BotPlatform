@@ -125,7 +125,9 @@ mvn package
 
 Then put plugin's archive under the same directory with the platform's executable jar and run:
 
+```bash
 java -cp BotPlatform.jar -Dloader.path=. -Dplugin.package=your.plugin.base.package org.springframework.boot.loader.PropertiesLauncher PlatformName
+```
 
 Arguments:
 
