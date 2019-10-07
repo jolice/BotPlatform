@@ -10,5 +10,4 @@ public interface Command {
 
     List<String> aliases();
 
-    Command NULL = new NullCommand();
 }

@@ -3,7 +3,6 @@ package io.riguron.bot.telegram.attachment;
 import io.riguron.bot.api.attachment.*;
 import org.springframework.stereotype.Component;
 
-@Component
 public class TelegramAttachmentFactory implements AttachmentFactory {
 
     @Override

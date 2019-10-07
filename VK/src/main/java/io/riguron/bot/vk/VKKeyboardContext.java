@@ -7,7 +7,7 @@ import io.riguron.bot.vk.keyboard.VKKeyboard;
 import io.riguron.bot.vk.keyboard.VKKeyboardBuilder;
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class VKKeyboardContext implements KeyboardContext {
 
     @Override

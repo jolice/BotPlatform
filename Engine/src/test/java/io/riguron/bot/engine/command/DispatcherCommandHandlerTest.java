@@ -4,6 +4,7 @@ import io.riguron.bot.api.MessageContext;
 import io.riguron.bot.api.MessageEvent;
 import io.riguron.bot.api.command.Command;
 import io.riguron.bot.api.command.CommandHandler;
+import io.riguron.bot.api.command.NullCommand;
 import io.riguron.bot.api.command.arguments.OffsetArguments;
 import io.riguron.bot.api.command.execution.CommandExecution;
 import io.riguron.bot.api.command.execution.StaticCommandExecution;
@@ -55,7 +56,7 @@ class DispatcherCommandHandlerTest {
     @Test
     void whenCommandIsNullThenAppropriateMessageReturned() {
         CommandRepository commandRepository = mock(CommandRepository.class);
-        when(commandRepository.getCommand(any())).thenReturn(Command.NULL);
+        when(commandRepository.getCommand(any())).thenReturn(NullCommand.INSTANCE);
         CommandHandler commandHandler = new DispatcherCommandHandler(commandRepository);
         MessageEvent messageEvent = mock(MessageEvent.class);
 
@@ -85,7 +86,7 @@ class DispatcherCommandHandlerTest {
 
         Command command = commandRepository.getCommand(text);
 
-        if (command != Command.NULL) {
+        if (command != NullCommand.INSTANCE) {
             String[] argumentData = text.split(" ");
             Arguments offsetArguments = new OffsetArguments(Arrays.asList(argumentData));
             command.execute(new StaticCommandExecution(argumentData[0], messageEvent, offsetArguments));

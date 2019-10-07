@@ -2,6 +2,7 @@ package io.riguron.bot.config;
 
 import io.riguron.bot.api.annotation.Warning;
 import io.riguron.bot.api.application.ApplicationMessageHandler;
+import io.riguron.bot.api.application.NoOpHandler;
 import io.riguron.bot.api.command.Command;
 import io.riguron.bot.api.command.repository.CommandRepository;
 import io.riguron.bot.api.command.repository.VirtualCommandRepository;
@@ -12,14 +13,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.DependsOn;
 
 import java.util.List;
 
 @Configuration
-@ComponentScan("io.riguron.bot.engine")
-@DependsOn("PluginManager")
-@SuppressWarnings(Warning.AUTOWIRING)
+@SuppressWarnings({Warning.AUTOWIRING, Warning.COMPONENT_SCAN})
+@ComponentScan("${plugin.package}")
 public class BotConfiguration {
 
     private static final Logger logger = LoggerFactory.getLogger(BotConfiguration.class);
@@ -30,8 +29,7 @@ public class BotConfiguration {
             logger.info("{} handler(s)", handlers.size());
             return handlers.size() > 1 ? new MultipleMessageHandler(handlers) : handlers.get(0);
         } else {
-            logger.info("No handlers found");
-            return ApplicationMessageHandler.NO_OP;
+            return NoOpHandler.INSTANCE;
         }
     }
 

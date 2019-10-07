@@ -1,9 +1,14 @@
 package io.riguron.bot.api.type;
 
-public interface BotTypeMeta {
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
-    String TELEGRAM = "Telegram";
-    String VK = "VK";
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public final class BotTypeMeta {
+
+    public static final String TELEGRAM = "Telegram";
+    public static final String VK = "VK";
+
 
 
 }

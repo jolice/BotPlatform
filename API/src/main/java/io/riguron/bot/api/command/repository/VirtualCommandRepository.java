@@ -1,6 +1,7 @@
 package io.riguron.bot.api.command.repository;
 
 import io.riguron.bot.api.command.Command;
+import io.riguron.bot.api.command.NullCommand;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,6 +21,6 @@ public class VirtualCommandRepository implements CommandRepository {
 
     @Override
     public Command getCommand(String input) {
-        return commands.getOrDefault(input.toLowerCase(), Command.NULL);
+        return commands.getOrDefault(input.toLowerCase(), NullCommand.INSTANCE);
     }
 }

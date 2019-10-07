@@ -7,13 +7,11 @@ import io.riguron.bot.api.message.OutgoingMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
 public class VKMessageFactory implements MessageFactory {
 
     private GroupActor groupActor;
     private VkApiClient vkApiClient;
 
-    @Autowired
     public VKMessageFactory(GroupActor groupActor, VkApiClient vkApiClient) {
         this.groupActor = groupActor;
         this.vkApiClient = vkApiClient;

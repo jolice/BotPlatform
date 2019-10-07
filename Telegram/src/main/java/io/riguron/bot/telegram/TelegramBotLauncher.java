@@ -9,13 +9,11 @@ import io.riguron.bot.telegram.message.IncomingTelegramMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
 public class TelegramBotLauncher implements BotLauncher {
 
     private TelegramBot telegramBot;
     private MessageHandler messageHandler;
 
-    @Autowired
     public TelegramBotLauncher(TelegramBot telegramBot, MessageHandler messageHandler) {
         this.telegramBot = telegramBot;
         this.messageHandler = messageHandler;

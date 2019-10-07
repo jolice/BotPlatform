@@ -6,7 +6,9 @@ import io.riguron.bot.api.command.execution.CommandExecution;
 import java.util.Collections;
 import java.util.List;
 
-public class NullCommand implements Command {
+public enum NullCommand implements Command {
+
+    INSTANCE;
 
     @Override
     public void execute(CommandExecution commandExecution) {

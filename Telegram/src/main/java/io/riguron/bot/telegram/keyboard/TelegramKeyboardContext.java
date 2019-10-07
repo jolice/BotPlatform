@@ -6,7 +6,6 @@ import io.riguron.bot.api.keyboard.BotKeyboard;
 import io.riguron.bot.api.keyboard.KeyboardBuilder;
 import org.springframework.stereotype.Component;
 
-@Component
 public class TelegramKeyboardContext implements KeyboardContext {
 
     @Override

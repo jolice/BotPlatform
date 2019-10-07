@@ -8,14 +8,12 @@ import io.riguron.bot.api.message.MessageFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
 public class TelegramMessageContext implements MessageContext {
 
     private AttachmentFactory attachmentFactory;
     private MessageFactory messageFactory;
     private KeyboardContext keyboardContext;
 
-    @Autowired
     public TelegramMessageContext(AttachmentFactory attachmentFactory, MessageFactory messageFactory, KeyboardContext keyboardContext) {
         this.attachmentFactory = attachmentFactory;
         this.messageFactory = messageFactory;
