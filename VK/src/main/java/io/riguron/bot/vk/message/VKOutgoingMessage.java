@@ -13,6 +13,7 @@ import io.riguron.bot.vk.attachment.VKAttachment;
 import io.riguron.bot.api.keyboard.BotKeyboard;
 import io.riguron.bot.api.message.OutgoingMessage;
 import io.riguron.bot.vk.keyboard.VKKeyboardSerializer;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,6 +22,7 @@ import java.util.function.Supplier;
 
 @EqualsAndHashCode
 @ToString
+@Slf4j
 public class VKOutgoingMessage implements OutgoingMessage {
 
     private MessagesSendQuery messagesSendQuery;
@@ -65,7 +67,7 @@ public class VKOutgoingMessage implements OutgoingMessage {
         try {
             this.messagesSendQuery.execute();
         } catch (ApiException | ClientException e) {
-            e.printStackTrace();
+            log.error("Failed to send a message", e);
         }
     }
 }

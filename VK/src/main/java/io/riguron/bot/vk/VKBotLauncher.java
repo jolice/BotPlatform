@@ -9,10 +9,11 @@ import com.vk.api.sdk.objects.messages.Message;
 import io.riguron.bot.api.BotLauncher;
 import io.riguron.bot.api.MessageHandler;
 import io.riguron.bot.vk.message.VKIncomingMessage;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-
+@Slf4j
 public class VKBotLauncher extends CallbackApiLongPoll implements BotLauncher {
 
     private MessageHandler messageHandler;
@@ -27,7 +28,7 @@ public class VKBotLauncher extends CallbackApiLongPoll implements BotLauncher {
         try {
             this.run();
         } catch (ClientException | ApiException e) {
-            e.printStackTrace();
+            log.error("Can't start a bot", e);
         }
     }
 
