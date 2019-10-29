@@ -33,7 +33,7 @@ platform-independent chat bots and choosing an appropriate platform at the runti
 - Lombok
 - Maven
 
-# Creating a bot
+## Creating a bot
 
 A bot to be run on the BotPlatform is represented by a plugin packaged in a JAR file. Such an architecture allows for decoupling the platform from the actual bot. 
 
@@ -142,7 +142,7 @@ Arguments:
 
 The latter option may be specified in the ```application.properties``` file that should reside in the same directory with platform's executable JAR.
 
-# Frequently asked questions
+## Frequently asked questions
 
 A: Do I need to know Spring framework to use BotPlatform?<br/>
 Q: BotPlatform utilizes Spring to register your bot's components dynamically. To define them properly, basic grasp of Spring IoC is required. 
