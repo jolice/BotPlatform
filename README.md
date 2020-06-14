@@ -55,7 +55,7 @@ As stated above, a bot is represented by a separate JAR file (plugin). Create a 
 
 ```xml
  <dependency>
-      <groupId>io.riguron.bot</groupId>
+      <groupId>com.github.jolice.bot.bot</groupId>
       <artifactId>api</artifactId>
       <version>1.0</version>
       <scope>provided</scope> 

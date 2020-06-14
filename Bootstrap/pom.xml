@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>platform</artifactId>
-        <groupId>io.riguron.bot</groupId>
+        <groupId>com.github.jolice.bot.bot</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -19,7 +19,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.1.9.RELEASE</version>
                 <configuration>
-                    <mainClass>io.riguron.bot.Bootstrap</mainClass>
+                    <mainClass>com.github.jolice.bot.Bootstrap</mainClass>
                 </configuration>
                 <executions>
                     <execution>
@@ -34,17 +34,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.riguron.bot</groupId>
+            <groupId>com.github.jolice.bot.bot</groupId>
             <artifactId>telegram</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>io.riguron.bot</groupId>
+            <groupId>com.github.jolice.bot.bot</groupId>
             <artifactId>vk</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>io.riguron.bot</groupId>
+            <groupId>com.github.jolice.bot.bot</groupId>
             <artifactId>engine</artifactId>
             <version>1.0</version>
         </dependency>
